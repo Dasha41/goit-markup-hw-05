@@ -119,13 +119,12 @@ body {
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: 0;
+  bottom: -48px;
   display: block;
   background-color: var(--color-logo);
   border-radius: 2px;
   transition: var(--color-accent);
-  margin-top: 24px;
-
+ 
   
   
 }
@@ -142,6 +141,7 @@ body {
 .nav-link:focus,
 .nav-link:hover{
     color: var(--color-accent);
+    transition: color var(--hover-transition);
 }
 .adress{
   font-style: normal;
@@ -209,7 +209,10 @@ letter-spacing: 0.04em;
 min-width: 169px;
 height: 56px;
 border:0;
-transition: background-color var(--hover-transition);
+
+transition: border var(--hover-transition),
+    background-color var(--hover-transition), color var(--hover-transition),
+    box-shadow var(--hover-transition);
 
 }
 .hero-btn:hover,
@@ -423,6 +426,7 @@ visibility: hidden;
   justify-content: center;
   align-items: center;
   background-color: var(--color-logo);
+   transition: background-color var(--hover-transition);
       }
       .team-soc-icon{
       fill: var(--color-background-cards);
@@ -473,12 +477,13 @@ margin-bottom: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border-color var(--hover-transition);
    
      
   }
   .customers-icon{
     fill:var(--color-accent-customers);
-   
+   transition: border-color var(--hover-transition);
   }
 
   
@@ -706,6 +711,7 @@ height: 100%;
 display:flex;
 justify-content: center;
 align-items: center;
+transition: background-color var(--hover-transition);
 }
 
 .footer-soc-link:hover,
