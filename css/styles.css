@@ -119,7 +119,7 @@ body {
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: -48px;
+  bottom: 0px;
   display: block;
   background-color: var(--color-logo);
   border-radius: 2px;
