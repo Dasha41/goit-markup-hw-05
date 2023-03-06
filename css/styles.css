@@ -72,11 +72,11 @@ body {
 }
 /*---Header---*/
 .header {
-  height: 72px;
-  border-bottom: 1px solid var(--color-btn-footer-light);
-  padding-bottom: 24px;
   padding-top: 24px;
-  background-color:var(--color-background-white)
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-btn-footer-light);
+  
+  background-color:var(--color-background-white);
  
 }
 .header-container{
@@ -114,16 +114,15 @@ body {
   
 }
 .active::after{
-
-  content: "";
-  width: 100%;
-  height: 4px;
-  left: 0;
-  bottom: 0px;
-  display: block;
-  background-color: var(--color-logo);
-  border-radius: 2px;
-  transition: var(--color-accent);
+content: "";
+display: block;
+position: absolute;
+width: 100%;
+height: 4px;
+left: 0;
+bottom: -29px;
+border-radius: 2px;
+  background-color: var(--color-accent);
  
   
   
@@ -137,6 +136,7 @@ body {
   transition: color var(--hover-transition);
 
 }
+
 
 .nav-link:focus,
 .nav-link:hover{
@@ -466,6 +466,7 @@ margin-bottom: 72px;
     width: 168px;
     height: 88px;
     
+   
   }
   
 
@@ -483,8 +484,9 @@ margin-bottom: 72px;
   }
   .customers-icon{
     fill:var(--color-accent-customers);
-   transition: border-color var(--hover-transition);
-  }
+    transition: fill var(--hover-transition);
+}
+  
 
   
   .customers-link:is(:hover,:focus){
@@ -493,6 +495,7 @@ margin-bottom: 72px;
   }
   .customers-link:is(:hover,:focus) .customers-icon {
     fill: var(--color-accent) ;
+    
   }
 
   /*---Footer---*/
@@ -559,6 +562,9 @@ margin-bottom: 72px;
 height: 48px;
 padding-right: 24px;
 padding-left: 24px;
+transition: border var(--hover-transition),
+    background-color var(--hover-transition), color var(--hover-transition),
+    box-shadow var(--hover-transition);
 
 }
 .btn:hover,
@@ -590,7 +596,8 @@ padding-right: 16px;
    width : calc((100% - 48px)/3);
     list-style: none;
     margin-right: 24px;
-   
+   transition:box-shadow var(--hover-transition);
+
     
    
 }
@@ -601,6 +608,7 @@ padding-right: 16px;
 .project-overlay{
   position: relative;
   overflow: hidden;
+ 
 }
 
   .main-link:is(:hover, :focus) .project-overlay-text {
@@ -625,6 +633,7 @@ padding-right: 16px;
   height: 100%;
   transform: translateY(100%);
   transition: transform var(--hover-transition);
+
 }
 
 .project-card-list>li:nth-child(3n) {
@@ -712,11 +721,13 @@ display:flex;
 justify-content: center;
 align-items: center;
 transition: background-color var(--hover-transition);
+ border-radius: 50%;
 }
 
 .footer-soc-link:hover,
 .footer-soc-link:focus{
-  border-radius: 50%;
+  
+  
 background: var(--color-accent-soc) ;
 }
 
